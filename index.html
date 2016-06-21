@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>flightLite</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="styles/bootstrap.paper.css">
+
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="styles/angular-material.min.css"></link>
+
+  <!-- Input Dropdown Style Sheet -->
+  <link rel="stylesheet" href="styles/inputDropdownStyles.css"></link>
+
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="styles/app.css">
+
+  <!-- Angular Scripts -->
+  <script src="js/angular/angular.min.js"></script>
+  <script src="js/angular/angular-aria.min.js"></script>
+  <script src="js/angular/angular-route.min.js"></script>
+  <script src="js/angular/angular-animate.min.js"></script>
+  <script src="js/angular/angular-messages.min.js"></script>
+  <script src="js/angular/angular-resource.min.js"></script>
+
+  <!-- Angular Material Script -->
+  <script src="js/angular/angular-material.min.js"></script>
+  <script src="js/angular/svg-assets-cache.js"></script>
+
+  <!-- Firebase Scripts -->
+  <script src="js/firebase/firebase.js"></script>
+  <script src="js/firebase/angularfire.min.js"></script>
+
+  <!-- Input DropDown -->
+  <script src="js/inputDropdown.js"></script>
+
+  <!-- My JS -->
+  <script src="js/app.js"></script>
+
+</head>
+<body ng-app="flightLite">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">
+          &nbsp;&nbsp;&nbsp;
+          <i class="fa fa-plane" aria-hidden="true"></i>
+          &nbsp;
+          flightLite &mdash; Easy Flight Search App
+        </a>
+      </div>
+      <!-- <ul class="nav navbar-nav pull-right">
+        <li class="nav-item">
+          <a class="nav-link" href="#/">Home<span class="sr-only">(current)</span></a>
+        </li>
+      </ul> -->
+    </div>
+  </nav>
+
+  <div class="container">
+    <div ng-view></div>
+  </div>
+
+  <!---->
+  <!---->
+  <!---->
+
+  <!-- jQuery -->
+  <script src="js/jquery-2.2.3.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
