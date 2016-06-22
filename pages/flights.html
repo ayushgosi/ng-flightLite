@@ -1,0 +1,45 @@
+<a href="#/search" class="btn btn-warning">Back To Search</a>
+
+<br><br>
+
+<!-- <div class = "panel panel-default">
+   <div class = "panel-heading">
+      <h3 class = "panel-title">
+         Flights
+      </h3>
+   </div>
+
+   <div class="panel-body" ng-repeat="x in flights.flightsData">
+      <div class="col-md-2">{{x.airlineName1}} ({{x.airlineNameCode1}})</div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+   </div>
+</div> -->
+
+<div class = "panel panel-default">
+   <div class = "panel-heading">
+      <h3 class = "panel-title">Flights</h3>
+   </div>
+
+   <table class = "table">
+      <tr>
+         <th>Departure</th>
+         <th>Via</th>
+         <th>Destination</th>
+         <th>Duration</th>
+         <th>Total Fare</th>
+      </tr>
+
+      <tr ng-repeat="x in flights.flightsData">
+         <td>{{x.departureCity}} ({{x.departureCityCode}}) <p>{{x.departureTime}}</p></td>
+         <td>{{x.airlineName1}} ({{x.airlineNameCode1}}) <p><em>STOPS: {{x.stops}}</em></p></td>
+         <td>{{x.destinationCity}} ({{x.destinationCityCode}}) <p>{{x.destinationTime}}</p></td>
+         <td>{{x.duration1}}</td>
+         <td>{{x.totalFare}}</td>
+      </tr>
+   </table>
+
+</div>

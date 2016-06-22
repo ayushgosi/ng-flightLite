@@ -1,59 +1,51 @@
-<h3 id="heading">search for flights</h3>
-<hr>
+<div class="row">
+  <div class="col-md-offset-3 col-md-6">
+    <div data-spy="affix" data-offset-top="300">
+      <h3 id="heading">search for flights</h3>
+      <hr>
+      <form class="form">
+        <div class="row">
+          <div class="form-group col-md-5">
+            <label>Select Departure City</label>
+            <select class="form-control" ng-model="search.departureObj" placeholder="Select Departure City"
+            ng-options="option as option.cityname + ' (' + option.iatacode + ')' for option in search.iataData" required=""></select>
+          </div>
+          <div class="form-group col-md-2 text-center">
+            <i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="form-group col-md-5">
+            <label>Select Destination City</label>
+            <select class="form-control" ng-model="search.destinationObj" placeholder="Select Destination City"
+            ng-options="option as option.cityname + ' (' + option.iatacode + ')' for option in search.iataData" required=""></select>
+          </div>
+        </div>
 
-<form class="form-inline">
-  <div class="row">
-    <div class="form-group col-md-3">
-      <b>Enter Departure City</b>
-      <select class="form-control" ng-model="search.departureObj" placeholder="Enter Departure City"
-      ng-options="option.cityname for option in search.iataCodes"></select>
-    </div>
-    <div class="col-md-1">
-      <i class="fa fa-arrow-circle-right fa-2x" aria-hidden="true"></i>
-    </div>
-    <div class="form-group col-md-3">
-      <b>Enter Destination City</b>
-      <select class="form-control" ng-model="search.destinationObj" placeholder="Enter Destination City" ng-options="option.cityname for option in search.iataCodes"></select>
-    </div>
-    <div class="form-group col-md-2">
-      <b>Enter Date</b>
-      <md-datepicker ng-model="search.myDate" md-placeholder="Enter date" md-min-date="search.minDate" md-max-date="search.maxDate"></md-datepicker>
-    </div>
-    <div class="col-md-2">
-      <button type="submit" class="btn btn-default" ng-click="search.flightData()">See Flights</button>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label>Select Date: </label>
+            <md-datepicker ng-model="search.myDate" md-placeholder="Select date" md-min-date="search.minDate" md-max-date="search.maxDate"></md-datepicker>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="form-group col-md-10">
+            <label>Seats: </label>
+            <input type="text" class="form-control" ng-model="search.adultTravelers" placeholder="Enter number">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-10">
+            <label>Child Passengers: </label>
+            <input type="text" class="form-control" ng-model="search.childTravelersAge" placeholder="Enter number">
+          </div>
+        </div> -->
+
+        <div>
+          <a type="submit" href="#/flights" class="btn btn-default" ng-click="search.sendInputDetails()">Search Flights</a>
+        </div>
+      </form>
     </div>
   </div>
-  <div class="row">
-    <div class="form-group col-md-3">
-      <b>Number of Adult Travelers</b>
-      <input type="text" class="form-control" ng-model="search.adultTravelers">
-    </div>
-    <div class="form-group col-md-3">
-      <b>Age of child (if any)</b>
-      <input type="text" class="form-control" ng-model="search.childTravelersAge">
-    </div>
-  </div>
-</form>
 
-<hr>
-
-{{search.departureObj}}
-<!-- <div class="row">
-<div class="col-md-3">
-
-<div class="panel panel-default">
-<div class="panel-heading">
-<h4 class="pane-title">Select A Doctor</h4>
-</div> -->
-
-<!-- List group -->
-<!-- <div class="list-group">
-<a href="#" class="list-group-item">Doctor 1</a>
-<a href="#" class="list-group-item">Doctor 2</a>
-<a href="#" class="list-group-item">Doctor 3</a>
-<a href="#" class="list-group-item">Doctor 4</a>
-<a href="#" class="list-group-item">Doctor 5</a>
 </div>
-</div>
-</div>
-</div> -->
